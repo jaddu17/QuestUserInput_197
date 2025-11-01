@@ -100,6 +100,30 @@ fun FormPendaftaran(modifier: Modifier){
                     textNama = it
                 }
             )
+            Text(
+                text = "JENIS KELAMIN",
+                fontSize = 18.sp,
+                color = Color.Black,
+                modifier = Modifier
+                    .padding(top = 10.dp, start = 10.dp)
+            )
+            Column {
+                gender.forEach { item ->
+                    Row(modifier = Modifier.selectable(
+                        selected = textJK == item,
+
+                        onClick = {textJK = item}
+                    ), verticalAlignment = Alignment.CenterVertically){
+                        RadioButton(
+                            selected = textJK == item,
+
+                            onClick = {
+                                textJK = item
+                            })
+                        Text(item)
+                    }
+                }
+            }
         }
     }
 }
