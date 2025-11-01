@@ -168,6 +168,21 @@ fun FormPendaftaran(modifier: Modifier){
                     textAlamat = it
                 }
             )
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 10.dp, start = 10.dp, end = 10.dp),
+                enabled = textAlamat.isNotEmpty(),
+
+                onClick = {
+                    nama = textNama
+                    jenis = textJK
+                    status = textSP
+                    alamat = textAlamat
+                }
+            ){
+                Text(stringResource(R.string.submit))
+            }
         }
     }
 }
