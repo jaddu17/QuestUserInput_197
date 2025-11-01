@@ -35,5 +35,9 @@ import com.example.pertemuan5.R
 
 @Composable
 fun FormPendaftaran(modifier: Modifier){
-
+    //variabel-variabel untuk mengingat nilai masukkan dari keyboard
+    var textNama by remember { mutableStateOf("") }
+    var textAlamat by remember { mutableStateOf("") }
+    var textJK by remember { mutableStateOf("") }
+    var textSP by remember { mutableStateOf("") }
 }
