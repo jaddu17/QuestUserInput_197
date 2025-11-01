@@ -79,13 +79,26 @@ fun FormPendaftaran(modifier: Modifier){
                 .height(600.dp)
                 .fillMaxWidth()
                 .padding(start = 12.dp, end = 12.dp, top = 15.dp)
-        ) {
+        ){
             Text(
                 text = "NAMA LENGKAP",
                 fontSize = 18.sp,
                 color = Color.Black,
                 modifier = Modifier
                     .padding(top = 10.dp, start = 10.dp)
+            )
+            OutlinedTextField(
+                value = textNama,
+                singleLine = true,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+
+                label = {Text(text = "Isian Nama Lengkap")},
+
+                onValueChange = {
+                    textNama = it
+                }
             )
         }
     }
