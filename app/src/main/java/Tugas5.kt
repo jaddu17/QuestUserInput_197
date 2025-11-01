@@ -55,5 +55,13 @@ fun FormPendaftaran(modifier: Modifier){
             .fillMaxSize()
             .background(colorResource(id = R.color.biru_muda)),
         horizontalAlignment = Alignment.CenterHorizontally
-    )
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(120.dp)
+                .padding(top = 30.dp)
+            .background(colorResource(R.color.hijau_tua))
+        )
+    }
 }
